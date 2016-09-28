@@ -24,6 +24,7 @@
 		950DB3231D9C271700E70051 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950DB3221D9C271700E70051 /* Security.framework */; };
 		950DB3251D9C271E00E70051 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950DB3241D9C271E00E70051 /* StoreKit.framework */; };
 		950DB3271D9C272B00E70051 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950DB3261D9C272B00E70051 /* SystemConfiguration.framework */; };
+		95E4B6631D9C5FC700337A56 /* TuneConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95E4B6621D9C5FC700337A56 /* TuneConfiguration.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		950DB3221D9C271700E70051 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		950DB3241D9C271E00E70051 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		950DB3261D9C272B00E70051 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		95E4B6621D9C5FC700337A56 /* TuneConfiguration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TuneConfiguration.plist; sourceTree = "<group>"; };
 		A1C0D058604A4D6CFBF76E0D /* Pods-TuneSDKTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuneSDKTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuneSDKTest/Pods-TuneSDKTest.debug.xcconfig"; sourceTree = "<group>"; };
 		B4DDCF16432F4B08D7F8E9C9 /* Pods-TuneSDKTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuneSDKTestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuneSDKTestUITests/Pods-TuneSDKTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C67F055E1511B455CBB268D4 /* Pods-TuneSDKTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuneSDKTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuneSDKTest/Pods-TuneSDKTest.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				950DB2E71D9B37B600E70051 /* AppDelegate.m */,
 				950DB2E91D9B37B600E70051 /* ViewController.h */,
 				950DB2EA1D9B37B600E70051 /* ViewController.m */,
+				95E4B6621D9C5FC700337A56 /* TuneConfiguration.plist */,
 				950DB2EC1D9B37B600E70051 /* Main.storyboard */,
 				950DB2EF1D9B37B600E70051 /* Assets.xcassets */,
 				950DB2F11D9B37B600E70051 /* LaunchScreen.storyboard */,
@@ -317,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				950DB2F31D9B37B600E70051 /* LaunchScreen.storyboard in Resources */,
+				95E4B6631D9C5FC700337A56 /* TuneConfiguration.plist in Resources */,
 				950DB2F01D9B37B600E70051 /* Assets.xcassets in Resources */,
 				950DB2EE1D9B37B600E70051 /* Main.storyboard in Resources */,
 			);
