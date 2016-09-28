@@ -1,0 +1,12 @@
+PODS:
+  - Tune (4.9.1)
+
+DEPENDENCIES:
+  - Tune
+
+SPEC CHECKSUMS:
+  Tune: 9b9ea9c5e82a5be7a91e8a08cfa9ecadbe4709b9
+
+PODFILE CHECKSUM: f81ecfe98bfd64989b74af70b6f15cdf0bccc508
+
+COCOAPODS: 1.0.1
