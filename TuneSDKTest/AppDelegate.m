@@ -7,8 +7,16 @@
 //
 
 #import "AppDelegate.h"
+@import AdSupport;
+@import CoreTelephony;
 @import Tune;
-
+@import MobileCoreServices;
+@import iAd;
+@import Security;
+@import StoreKit;
+@import SystemConfiguration;
+@import Tune;
+ 
 @interface AppDelegate ()
 
 @end
@@ -22,10 +30,50 @@
     [Tune initializeWithTuneAdvertiserId:@"190163"
                        tuneConversionKey:@"198dacaee0fd940d83ad259a27ec6fd5"];
     
+#ifdef DEBUG
+    [Tune setPackageName:@"com.TuneSDKTest"];
+#else
+    [Tune setPackageName:@"com.TuneSDKTest"];
+#endif
+    
     NSLog(@"Hello World");
+    
+
+    [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
+
     
     
     return YES;
+}
+
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    [Tune application:application tuneDidRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+    [Tune application:application tuneDidFailToRegisterForRemoteNotificationsWithError:error];
+}
+
+// iOS 9+
+- (void)application:(UIApplication *)application handleActionWithIdentifier:(nullable NSString *)identifier forRemoteNotification:(NSDictionary *)userInfo withResponseInfo:(NSDictionary *)responseInfo completionHandler:(void(^)())completionHandler
+{
+    [Tune application:application tuneHandleActionWithIdentifier:identifier forRemoteNotification:userInfo completionHandler:completionHandler];
+}
+
+// iOS 8+
+- (void)application:(UIApplication *)application handleActionWithIdentifier:(nullable NSString *)identifier forRemoteNotification:(NSDictionary *)userInfo completionHandler:(void(^)())completionHandler
+{
+    [Tune application:application tuneHandleActionWithIdentifier:identifier forRemoteNotification:userInfo completionHandler:completionHandler];
+}
+
+// iOS 7+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))completionHandler
+{
+    [Tune application:application tuneDidReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
